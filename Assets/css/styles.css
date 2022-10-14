@@ -1,0 +1,452 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+	font-family: 'Roboto', sans-serif;
+	
+
+}
+
+ul {
+    margin-bottom: 0 !important;
+}
+
+.index,
+.contact,
+.Wie-Zijn-We,
+.portfolio,
+.keuken {
+    margin-top: 140px !important;
+}
+
+.navbar {
+    margin-top: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1024;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.brand-title {
+    margin: 2px 0px 0px 99px ;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    padding: 1rem;
+}
+
+.navbar-links li a:hover{
+    text-decoration: underline black 0.13rem;
+    text-underline-offset: 0.95rem;
+}
+
+.navbar-links .active{
+    text-decoration: underline black 0.13rem;
+    text-underline-offset: 0.95rem;
+}
+
+.navanimate{
+	opacity: 0;
+	margin-top: -60px;
+	animation: 1s slidefade 1s forwards;
+}
+
+@keyframes slidefade {
+	100% {
+		opacity: 1;
+        margin-top: 0.01rem;
+	}
+}
+
+
+.toggle-button {
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.card-img-top{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+@media (max-width: 930px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .card-img-top{
+      height: 320px;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+
+.contact{
+    margin-top: 65px;
+    padding-left: 85px;
+}
+
+.contact p{
+    margin-top: 20px;
+    font-size:medium;
+   
+}
+
+.contact_btn {
+  margin-top: 20px;
+  width: 100%;
+  color: black;
+  border: solid 3px black;
+  background: white;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 84px;
+  transition: all 0.2s ease-in-out
+}
+
+.contact_btn:hover{
+    background-color: black;
+    color: white;
+}
+
+.form{
+    
+    padding-right: 10%;
+}
+
+.form-control {
+    border: solid 1px black;
+    border-radius: 0;
+  }
+ .top{
+    margin-top: 10px;
+    margin-bottom: -10px;
+ }
+
+.map{
+    margin-top: 70px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    height: max-content;
+}
+
+.footer_head{
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    margin-top: -6px;
+}
+
+.footer_head p{
+   color: white;
+    margin-top: 50px;
+}
+
+.Wie-Zijn-We p{
+    padding-bottom: 10px;
+    font-size: 15px;    
+}
+
+.social{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 25px;
+    display: inline-block;
+    padding-left: 25px ;
+ 
+}
+
+.section .top-side {
+    text-align: left;
+  }
+  .section .top-side .title {
+    font-weight: 500;
+    font-size: 15px;
+    display: inline-block;
+  }
+  .section .top-side .title:after {
+    content: "";
+    display: block;
+    width: 50%;
+    border-bottom: 1px solid #494949;
+    margin: 8px auto;
+  }
+  .section .top-side h2 {
+    font-weight: 700;
+  }
+  .section.portfolio .filters {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .section.portfolio .filters ul {
+    text-align: left;
+    padding: 0;
+  }
+  .section.portfolio .filters ul li {
+    font-weight: 600;
+    list-style: none;
+    display: inline-block;
+    padding: 20px 17px;
+    cursor: pointer;
+    position: relative;
+  }
+  .section.portfolio .filters ul li:after {
+    content: "";
+    display: block;
+    width: calc(0% - 60px);
+    position: absolute;
+    height: 2px;
+    background: #333;
+    transition: width 350ms ease-out;
+  }
+  .section.portfolio .filters ul li:hover:after {
+    width: calc(100% - 37px);
+    transition: width 350ms ease-out;
+  }
+  .section.portfolio .filters ul li.active:after {
+    width: calc(100% - 37px);
+  }
+  .section.portfolio .filters-content {
+    margin-top: 50px;
+  }
+  .section.portfolio .filters-content .show {
+    opacity: 1;
+    visibility: visible;
+    transition: all 350ms;
+  }
+  .section.portfolio .filters-content .hide {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 350ms;
+  }
+  .section.portfolio .filters-content .item {
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    padding:10px;
+    width: 280px;
+    height: 280px;
+  }
+
+  .section.portfolio .filters-content .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.carousel-inner img{
+  height: 410px;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  object-fit: cover;
+}
+
+.carousel-caption h1, .carousel-caption p {
+  color: black
+}
+
+.carousel-caption button {
+  width: 250px;
+  margin-top: 0 !important;
+  background : none;
+}
+
+
+.index {
+    margin-top: 100px !important;
+}
+
+
+.index_btn {
+  margin-top: 20px;
+  width: 320px;
+  height: 48px;
+  color: black;
+  border: solid 2px black;
+  background: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: all 0.2s ease-in-out;
+  
+}
+
+.index_btn:hover{
+    background-color: black;
+    color: white;
+}
+
+.text-align{
+  text-align: center;
+  justify-content: center;
+  color: black;
+  font-family: 'proxima-nova', sans-serif;
+  margin-top: 35px;
+  width: 93vh;
+}
+
+@media (max-width: 539px) {
+  .text-align {
+      width:fit-content;
+  }
+  .card-img-top{
+    height: 400px;
+  }
+} 
+
+.text-align h1{
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.text-align p{
+  font-size: 16px;
+}
+
+.hero {
+  position: relative;
+  justify-content: center;
+  text-align: center; 
+  min-height: 70%;
+  color: #fff;
+}
+
+.hero .background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-blend-mode: darken;
+  z-index: -1;
+}
+
+.hero h1 {
+    font: bold 32px "Open sans", sans-serif;
+    margin-top: 58px;
+}
+
+.hero p {
+  font: normal 16px "Open sans", sans-serif ;
+}
+
+
+.hero-content-area {
+  opacity: 1;
+  margin-top: 20px;
+  border: solid transparent;
+}
+
+.color{
+  border: solid 2px red;
+  height:285px;
+  width: 260px;
+  margin-left: 25px;
+  background-size: cover;
+}
+
+
+
+
+
+.card{
+  border: none;
+  margin-top: -80px;
+  
+}
+
+.card-body{
+  height: 80px; 
+}
+
+.card-title{
+  text-align: center;
+}
+
+.atag{
+  display: flex;
+  position: relative;
+}
+
+.carousel-control-prev{
+  border: none;
+  background-color: transparent;
+}
+
+.carousel-control-next{
+  border: none;
+  background-color: transparent;
+}
